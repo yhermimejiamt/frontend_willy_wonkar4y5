@@ -16,7 +16,7 @@ const ActualizarProducto = () => {
 
     const [productosActualizar, guardarProductosActualizar] = useState([]);
 
-    fetch(`http://localhost:8080/api/chocolate/${reference}`)
+    fetch(`http://144.22.238.193:8080/api/chocolate/${reference}`)
         .then((res) => res.json())
         .then((data) => {
 
@@ -48,7 +48,7 @@ const ActualizarProducto = () => {
                 if (result.isConfirmed) {
                     try {
                         console.log(datos);
-                        fetch(`http://localhost:8080/api/chocolate/update`, {
+                        fetch(`http://144.22.238.193:8080/api/chocolate/update`, {
                             method: "PUT",
                             body: JSON.stringify(datos),
                             headers: {

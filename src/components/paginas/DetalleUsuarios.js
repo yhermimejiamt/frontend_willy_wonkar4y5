@@ -34,7 +34,7 @@ const DetalleUsuarios = () => {
                 if (result.isConfirmed) {
                     try {
                         console.log(datos);
-                        fetch(`http://localhost:8080/api/user/new`, {
+                        fetch(`http://144.22.238.193:8080/api/user/new`, {
                             method: "POST",
                             body: JSON.stringify(datos),
                             headers: {

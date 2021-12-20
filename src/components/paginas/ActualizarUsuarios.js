@@ -16,7 +16,7 @@ const ActualizarUsuario = () => {
 
     const [usuariosActualizar, guardarUsuariosActualizar] = useState([]);
 
-    fetch(`http://localhost:8080/api/user/${id}`)
+    fetch(`http://144.22.238.193:8080/api/user/${id}`)
         .then((res) => res.json())
         .then((data) => {
 
@@ -52,7 +52,7 @@ const ActualizarUsuario = () => {
                 if (result.isConfirmed) {
                     try {
                         console.log(datos);
-                        fetch(`http://localhost:8080/api/user/update`, {
+                        fetch(`http://144.22.238.193:8080/api/user/update`, {
                             method: "PUT",
                             body: JSON.stringify(datos),
                             headers: {

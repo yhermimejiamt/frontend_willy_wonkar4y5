@@ -10,7 +10,7 @@ const FormularioProductos = ({ producto }) => {
 
     const [productos, guardarProductos] = useState([]);
 
-    fetch("http://localhost:8080/api/chocolate/all")
+    fetch("http://144.22.238.193:8080/api/chocolate/all")
         .then((res) => res.json())
         .then((data) => {
             //console.log(data);
@@ -44,7 +44,7 @@ const FormularioProductos = ({ producto }) => {
             if (result.isConfirmed) {
                 try {
                     console.log(reference);
-                    fetch(`http://localhost:8080/api/chocolate/${reference}`, {
+                    fetch(`http://144.22.238.193:8080/api/chocolate/${reference}`, {
                         method: "DELETE",
                         headers: {
                             Accept: "aplication/json",

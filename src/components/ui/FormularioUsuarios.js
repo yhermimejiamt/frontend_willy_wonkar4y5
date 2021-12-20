@@ -10,7 +10,7 @@ const FormularioUsuarios = ({ usuario }) => {
 
     const [usuarios, guardarUsuarios] = useState([]);
 
-    fetch("http://localhost:8080/api/user/all")
+    fetch("http://144.22.238.193:8080/api/user/all")
         .then((res) => res.json())
         .then((data) => {
             //console.log(data);
@@ -40,7 +40,7 @@ const FormularioUsuarios = ({ usuario }) => {
             if (result.isConfirmed) {
                 try {
                     console.log(id);
-                    fetch(`http://localhost:8080/api/user/${id}`, {
+                    fetch(`http://144.22.238.193:8080/api/user/${id}`, {
                         method: "DELETE",
                         headers: {
                             Accept: "aplication/json",

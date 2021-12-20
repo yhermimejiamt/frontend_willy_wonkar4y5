@@ -33,7 +33,7 @@ const DetalleProductos = () => {
                 if (result.isConfirmed) {
                     try {
                         console.log(datos);
-                        fetch(`http://localhost:8080/api/chocolate/new`, {
+                        fetch(`http://144.22.238.193:8080/api/chocolate/new`, {
                             method: "POST",
                             body: JSON.stringify(datos),
                             headers: {
@@ -77,7 +77,6 @@ const DetalleProductos = () => {
                                 onSubmit={formik.handleSubmit}
                             >
                                 <div className="mb-4">
-
                                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="nombre">REFERENCIA</label>
                                     <input
                                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -88,7 +87,6 @@ const DetalleProductos = () => {
                                         onChange={formik.handleChange}
                                     />
                                 </div>
-
                                 <div className="mb-4">
                                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="nombre">CATEGORIA</label>
                                     <input
@@ -100,8 +98,6 @@ const DetalleProductos = () => {
                                         onChange={formik.handleChange}
                                     />
                                 </div>
-
-
                                 <div className="mb-4">
                                     <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="nombre">DESCRIPCION</label>
                                     <input

@@ -6,7 +6,7 @@ import Sidebar from '../ui/Sidebar';
 const Usuarios = () => {
     const [ usuarios, guardarUsuarios] = useState([]);
 
-    fetch("http://localhost:8080/api/user/all")
+    fetch("http://144.22.238.193:8080/api/user/all")
     .then((res) => res.json())
     .then((data) => {
         //console.log(data);
